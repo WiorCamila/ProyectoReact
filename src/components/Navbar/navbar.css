@@ -1,0 +1,10 @@
+.conteiner-navbar{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: stretch;
+}
+
+.conteiner-navbar a{
+    margin: 10px;
+}

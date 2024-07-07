@@ -1,12 +1,13 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react"
+import "../ItemCount/ItemCount.css"
 
 const ItemCount = ( {stock, inicial} ) =>{
     const [cantidad, setCantidad] = useState(inicial)
 
     const clickMenos = () =>{
         if(cantidad === 0){
-            alert("No se puede seleccionar menos 1 producto.")
+            alert("Por favor seleccione 1 o más productos.")
             return
         }
         setCantidad(cantidad - 1)
@@ -22,10 +23,10 @@ const ItemCount = ( {stock, inicial} ) =>{
 
     return (
         
-        <div>
-            <button onClick={clickMenos}>-</button>
+        <div className="botonMasYMenos">
+            <button type="button" className="btn btn-primary" onClick={clickMenos}>-</button>
             <span>{cantidad}</span>
-            <button onClick={clickMas}>+</button>
+            <button type="button" className="btn btn-primary" onClick={clickMas}>+</button>
         </div>
     )
 }

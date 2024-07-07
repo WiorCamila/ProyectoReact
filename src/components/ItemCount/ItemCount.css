@@ -1,0 +1,6 @@
+.botonMasYMenos{
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    border: 3px solid black;
+}

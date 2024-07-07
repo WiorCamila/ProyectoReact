@@ -1,10 +1,18 @@
+.imagen-principal-binah {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 24px;
+}
+
 .conteiner-navbar{
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: flex-end;
-    align-items: stretch;
+    flex-wrap: inherit;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .conteiner-navbar a{
     margin: 10px;
+    
 }

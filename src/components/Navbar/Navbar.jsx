@@ -6,12 +6,16 @@ const Navbar = ( { categorias }) => {
 
     return (
         <>
-            <nav className="navbar navbar-expand-lg bg-body-tertiary">
-                <div className="container-fluid">
+
+            <nav className="navbar-expand-lg bg-body-tertiary">
+                <div className="navbar-expand-lg bg-body-tertiary imagen-principal-binah">
                     <img src="https://binahdeco.com.ar/cdn/shop/files/binah-logo.svg?v=1695153268&width=140" />
+                </div>
+                <div className="container-fluid">
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
+                    
                     <div className="conteiner-navbar">
                         <div className="navbar-nav">
                             <a className="nav-link" href="#">{categorias[0]}</a> 
@@ -22,6 +26,7 @@ const Navbar = ( { categorias }) => {
                             <a className="nav-link" href="#">{categorias[5]}</a>
                             <a className="nav-link" href="#">{categorias[6]}</a>
                         </div>
+                        <CartWidget />
                     </div>
                 </div>
             </nav>
@@ -38,7 +43,7 @@ const Navbar = ( { categorias }) => {
                 <a href="#"> {categorias[5]}</a>
                 <a href="#"> {categorias[6]}</a>
             </div> */}
-            <CartWidget />
+            
         </>
     )
 }

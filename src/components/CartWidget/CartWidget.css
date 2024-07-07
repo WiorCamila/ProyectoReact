@@ -1,9 +1,3 @@
-.CarritoDeCompra{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-end;
-    align-items: baseline;
-    margin-top: 10px;
-    margin-right: 25px;
+.carritoDeCompra-person{
+    padding: 15px;
 }

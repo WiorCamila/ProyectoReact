@@ -10,11 +10,11 @@ const Item = ({products}) =>{
     return( 
         <>
             <div className="card-items">
-                <Card style={{ width: '14rem'}} >
+                <Card >
                     <Card.Img variant="top" src={products.img} />
                     <Card.Body >
                         <Card.Title>{products.name}</Card.Title>
-                        <Card.Text>{products.description}</Card.Text>
+
                         <Card.Text>${products.precio}</Card.Text>
                         <Link to={`/Producto/${products.id}`}>
                             <Button variant="primary">Ver detalles</Button>

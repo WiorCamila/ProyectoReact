@@ -1,10 +1,14 @@
-import spinner from "../Loading/spinner.gif"
+import Spinner from 'react-bootstrap/Spinner';
+import "../Loading/LoadingSpinner.css"
 
 export const LoadingSpinner = () => {
     return(
         <>
-            <div>
-                <img src={spinner} alt="Loading ..." />
+            <div className='spinner-img'>
+                <Spinner animation="border" role="status" >
+                    <span className="visually-hidden">Loading...</span>
+                </Spinner>
+                
             </div>
         </>
     )

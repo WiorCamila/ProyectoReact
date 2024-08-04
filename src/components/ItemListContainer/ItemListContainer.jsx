@@ -33,7 +33,7 @@ const ItemListContainer = () =>{
 
 
     return (
-        <main className="card-container" >
+        <main>
             <div >
                 { cargando ? <LoadingSpinner /> : <ItemList productos={productos}/> }
             </div>

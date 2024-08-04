@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { getProductById } from "../fetch/fetchData";
 import { LoadingSpinner } from "../Loading/LoadingSpinner.jsx"
 import ItemLDetail from "../ItemDetail/ItemDetail.jsx"
-
+import "../ItemDetailContainer/ItemDetailContainer.css"
 
 const ItemDetailContainer = () =>{
     const [product, setProduct] = useState({})
@@ -29,8 +29,11 @@ const ItemDetailContainer = () =>{
 
     return(
         <>
-            <main>
-                { cargando ? <LoadingSpinner /> : <ItemLDetail product={product}/> }
+            <main >
+                <div className="container-detail">
+                    { cargando ? <LoadingSpinner /> : <ItemLDetail product={product}/> }
+
+                </div>
             </main>
         </>
     )

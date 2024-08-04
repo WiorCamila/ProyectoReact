@@ -68,7 +68,8 @@ export const productosArrays = [
     {
         id: 8,
         name: "MATE GREEN CON BOMBILLA",
-        description: "MATERIAL: ACERO INOXIDABLE, INCLUYE: BOMBILLA DE ACERO INOXIDABLE",
+        description: 
+        "MATERIAL: ACERO INOXIDABLE INCLUYE: BOMBILLA DE ACERO INOXIDABLE.",
         precio: 139990,
         stock: 10,
         img: "https://res.cloudinary.com/dejd638ze/image/upload/v1722735506/mate-sakura-green-bombilla-limpiador_uqgv5i.webp",
@@ -140,13 +141,5 @@ export const productosArrays = [
         img: "https://res.cloudinary.com/dejd638ze/image/upload/v1722736160/copetinero-marmol-tabla-acacia-mango-X3-2_tys8ub.webp",
         category: ["Recipiente", "Home"]
     },
-    {
-        id: 16,
-        name: "COPETINERO BAMBÚ ASTON 22CM",
-        description: "MATERIAL: BAMBÚ",
-        precio: 48490,
-        stock: 10,
-        img: "https://res.cloudinary.com/dejd638ze/image/upload/v1722805921/copetinero-bambu-aston_hu58qo.webp",
-        category: ["Recipiente", "Home"]
-    }
+   
  ]

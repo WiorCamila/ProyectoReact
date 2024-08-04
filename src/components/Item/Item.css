@@ -1,4 +1,17 @@
 .card-items{
     height: auto;
     width: 16rem;
+    padding-bottom: 10px;
+}
+
+.Card.Title{
+    font-size: 15px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    
+}
+
+.card-items h5{
+    color: blue;
 }

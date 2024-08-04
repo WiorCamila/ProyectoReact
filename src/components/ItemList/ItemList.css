@@ -6,11 +6,13 @@
     
 }
 
-.card-itemList img{
-    width: 100%
+.card-itemList{
+    margin: 2px;
+    padding: 10px;
+    padding-top: 20px;
 }
 
 .card-itemList{
-    margin: 2px;
-    padding: 5px;
+    color: blue;
 }
+

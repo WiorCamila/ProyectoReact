@@ -14,7 +14,6 @@ const Item = ({products}) =>{
                     <Card.Img variant="top" src={products.img} />
                     <Card.Body >
                         <Card.Title>{products.name}</Card.Title>
-
                         <Card.Text>${products.precio}</Card.Text>
                         <Link to={`/Producto/${products.id}`}>
                             <Button variant="primary">Ver detalles</Button>

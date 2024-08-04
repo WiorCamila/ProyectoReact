@@ -9,7 +9,7 @@ export const productosArrays = [
         precio: 143820,
         stock: 10,
         img: "https://res.cloudinary.com/dejd638ze/image/upload/v1722734381/juegos-balash-beige_jg9clp.webp",
-        category: ["Vijilla"]
+        category: ["Vajilla", "Home"]
     },
     {
         id: 2,
@@ -18,7 +18,7 @@ export const productosArrays = [
         precio: 181690,
         stock: 10,
         img: "https://res.cloudinary.com/dejd638ze/image/upload/v1722734380/juegos-vajilla-batic-black-and-white_dha63a.webp",
-        category: ["Vijilla", "Home"]
+        category: ["Vajilla", "Home"]
     },
     {
         id: 3,
@@ -27,7 +27,7 @@ export const productosArrays = [
         precio: 126970,
         stock: 10,
         img: "https://res.cloudinary.com/dejd638ze/image/upload/v1722734380/juego-vajilla-sunderland_ituwxa.webp",
-        category: ["Vijilla", "Home"]
+        category: ["Vajilla", "Home"]
     },
     {
         id: 4,

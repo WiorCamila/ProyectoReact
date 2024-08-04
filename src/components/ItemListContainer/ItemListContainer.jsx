@@ -12,21 +12,19 @@ const ItemListContainer = ( {titulo, otroTitulo} ) =>{
 
     //useEffect
     useEffect(() =>{
-        console.log("se monto el componente")
 
          //PROMESA
-        getProducts()
+        getProducts(cat)
             .then((respuesta)=>{
-            console.log("se ejecuto la promesa")
             setProductos(respuesta)
         })
         .catch((error)=>{
             console.log(error)
         })
         .finally(()=>{
-            console.log("finalizo la promesa")
+            
         })
-    }, [])
+    }, [cat])
 
    
 
@@ -40,9 +38,9 @@ const ItemListContainer = ( {titulo, otroTitulo} ) =>{
 
 
     return (
-        <>  
-            <button onClick={()=> setCat()}>Set categories</button>
-            <button onClick={()=> cat()}>Category</button>
+        <main>  
+            <button onClick={()=> setCat("Home")}>Set categories = Vajilla</button>
+            <button onClick={()=> setCat("Botellas")}>Category = Botellas</button>
             <div>
                 <div>{titleToShow}</div>
 
@@ -50,7 +48,7 @@ const ItemListContainer = ( {titulo, otroTitulo} ) =>{
             <ItemList productos={productos}/>
             {/*<ItemCount stock={10} inicial={0}/> */}
             
-        </>
+        </main>
     )
 }
 

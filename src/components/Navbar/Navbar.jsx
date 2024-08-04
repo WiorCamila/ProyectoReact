@@ -2,8 +2,11 @@
 import CartWidget from "../CartWidget/CartWidget";
 import "../Navbar/Navbar.css"
 import NavbarLink from "./NavbarLink";
+import { categorias } from "../Mock/SimulatorData";
 
-const Navbar = ({categorias}) =>{  
+const Navbar = () =>{  
+
+
 
     return(
         <>

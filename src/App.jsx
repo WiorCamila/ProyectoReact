@@ -5,6 +5,7 @@ import ItemListContainer from "./components/ItemListContainer/ItemListContainer.
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Layout from './components/Layout/Layout.jsx';
 import Error404 from './components/Error404/Error404.jsx';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer.jsx';
 
 function App() {
   const titulo = "Bienvenidos a Binah Deco."
@@ -15,7 +16,8 @@ function App() {
         <Layout>
           <Routes>
             <Route path="/" element={<ItemListContainer titulo={titulo} />}/>
-            <Route path="/Home" element={<ItemListContainer titulo={titulo} />}/>
+            <Route path="/Categorias/:categoriasDeId" element={<ItemListContainer titulo={titulo} />}/>
+            <Route path="/Producto/:id" element={<ItemDetailContainer />}/>
             <Route path="/Contact" element={<Contacto />}/>
             <Route path="/About" element={<AboutUs />}/>
             <Route path="*" element={<Error404 />}/>

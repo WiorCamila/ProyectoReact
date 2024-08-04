@@ -1,11 +1,12 @@
 /* eslint-disable react/prop-types */
 import Item from "../Item/Item";
+import "../ItemList/ItemList.css"
 
 const ItemList = ({productos}) => {
     return(
         <>
-            <div>
-                <div>ItemList</div>
+            <div className='card-itemList'>
+                
                 {productos.map((products) => {
                     return <Item key={products.id} products={products} />
             })}

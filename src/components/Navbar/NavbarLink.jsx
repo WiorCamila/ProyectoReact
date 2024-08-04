@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 const NavbarLink = ({category}) =>{
     return(
-        <NavLink to={`/${category}`} href="#" className="navbarContainer">{category}</NavLink>
+        <NavLink to={`/categorias/${category}`} href="#" className="navbarContainer">{category}</NavLink>
     )
 }
 

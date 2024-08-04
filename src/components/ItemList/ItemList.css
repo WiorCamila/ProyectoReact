@@ -1,0 +1,16 @@
+.card-itemList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+    
+}
+
+.card-itemList img{
+    width: 100%
+}
+
+.card-itemList{
+    margin: 2px;
+    padding: 5px;
+}

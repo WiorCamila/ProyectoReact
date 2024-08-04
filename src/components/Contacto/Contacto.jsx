@@ -1,7 +1,13 @@
+import { NavLink } from "react-router-dom";
+import contact from "../Contacto/contact.png"
+
 const Contacto = () => {
     return(
-        <>
-            <h1>Contacto from</h1>
+        <>  
+            <NavLink>
+                <img src={contact} alt="" />
+            </NavLink>
+            
         </>
     )
 }

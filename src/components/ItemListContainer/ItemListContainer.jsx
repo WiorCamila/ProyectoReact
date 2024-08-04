@@ -1,16 +1,55 @@
 /* eslint-disable react/prop-types */
-import ItemCount from "../ItemCount/ItemCount.jsx"
-import "../ItemListContainer/ItemListContainer.css"
-//import CartWidget from "../CartWidget/CartWidget.jsx"
+import { useEffect, useState } from "react"
+import ItemList from "../ItemList/ItemList.jsx"
+//import { productosArrays } from "../Mock/SimulatorData.js"
+import { getProducts } from "../fetch/fetchData.js"
 
-const ItemListContainer = ( {titulo} ) =>{
+
+const ItemListContainer = ( {titulo, otroTitulo} ) =>{
+    const [productos, setProductos] = useState([])
+    const [cat, setCat] =useState("Mate")
+
+
+    //useEffect
+    useEffect(() =>{
+        console.log("se monto el componente")
+
+         //PROMESA
+        getProducts()
+            .then((respuesta)=>{
+            console.log("se ejecuto la promesa")
+            setProductos(respuesta)
+        })
+        .catch((error)=>{
+            console.log(error)
+        })
+        .finally(()=>{
+            console.log("finalizo la promesa")
+        })
+    }, [])
+
+   
+
+    let titleToShow 
+
+    if (titulo != undefined){
+        titleToShow = titulo
+    }else{
+        titleToShow = otroTitulo 
+    }
+
+
     return (
         <>  
+            <button onClick={()=> setCat()}>Set categories</button>
+            <button onClick={()=> cat()}>Category</button>
             <div>
-                <div className="title-principal">{titulo} </div> 
+                <div>{titleToShow}</div>
+
             </div>
+            <ItemList productos={productos}/>
+            {/*<ItemCount stock={10} inicial={0}/> */}
             
-            <ItemCount stock={10} inicial={0}/>
         </>
     )
 }

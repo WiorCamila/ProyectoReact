@@ -7,10 +7,6 @@
     background-color: #f7f9f9 ;
 }
 
-img{
-    width: 15%;
-}
-
 .navbarContainer{
     display: flex;
     flex-wrap: nowrap;
@@ -23,6 +19,11 @@ img{
     font-weight: 600;
     background-color: #f7f9f9 ;
     padding-top: 20px;
+    width: 100%;
+}
+
+img{
+    width: 15%;
 }
 
 .navbarContainer:hover{
@@ -31,4 +32,10 @@ img{
 
 .navbarContainer:active{
     color: blue;
+}
+
+
+.imgContacto img{
+    width: 30px;
+    padding-top: 26px;
 }

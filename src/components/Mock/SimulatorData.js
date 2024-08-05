@@ -1,5 +1,5 @@
 
-export const categorias = ["Home", "Vajilla", "Botellas", "Mate", "Termo", "Recipiente"];
+export const categorias = ["Home", "Vajilla", "Botellas", "Mate", "Termo", "Recipiente", "Contacto"];
 
 export const productosArrays = [
     //Vajillas. 

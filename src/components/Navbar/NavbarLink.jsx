@@ -17,8 +17,7 @@ const NavbarLink = ({category}) =>{
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
-                            <NavLink to={`/categorias/${category}`} href="#">{category}</NavLink>
-
+                            <NavLink to={`/categorias/${category}`} className="navbarContainer" href="#">{category}</NavLink>
 
                         </Nav>
                     </Navbar.Collapse>

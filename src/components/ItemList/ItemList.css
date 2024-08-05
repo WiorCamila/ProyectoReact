@@ -2,14 +2,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    
-    
 }
 
+
+
 .card-itemList{
-    margin: 2px;
-    padding: 10px;
-    padding-top: 20px;
+    margin: 7px;
+    padding: 12px;
+    padding-top: 0px;
 }
 
 .card-itemList{

@@ -22,11 +22,11 @@ img{
     font-size: 18px;
     font-weight: 600;
     background-color: #f7f9f9 ;
-    padding-top: 35px;
+    padding-top: 20px;
 }
 
 .navbarContainer:hover{
-    color: purple;
+    color: rgb(142, 2, 142);
 }
 
 .navbarContainer:active{

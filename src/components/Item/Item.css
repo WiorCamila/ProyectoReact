@@ -1,17 +1,18 @@
 .card-items{
     height: auto;
     width: 16rem;
-    padding-bottom: 10px;
+    padding-bottom: 17px;
 }
 
-.Card.Title{
-    font-size: 15px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    
+.item-title h1{
+    font-size: 16px;
+    padding-top: 6px;
+}
+.item-title {
+    padding-left: 5px;
 }
 
-.card-items h5{
-    color: blue;
+.buttom{
+    margin: 7px;
+    margin-right: 5px;
 }

@@ -13,6 +13,9 @@ function App() {
   return (
     <>
       <BrowserRouter>
+          <div className="navbar-imagen">
+            <img src="https://binahdeco.com.ar/cdn/shop/files/binah-logo.svg?v=1695153268&width=140" alt="" />
+          </div>
         <Layout>
           <Routes>
             <Route path="/" element={<ItemListContainer titulo={titulo} />}/>

@@ -1,13 +1,41 @@
-/* eslint-disable react/jsx-no-undef */
 /* eslint-disable react/prop-types */
-// eslint-disable-next-line react/prop-types
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+//
+
+
 import { NavLink } from "react-router-dom";
 import "../Navbar/Navbar.css"
 
 const NavbarLink = ({category}) =>{
     return(
         <>
-            <NavLink to={`/categorias/${category}`} href="#" className="navbarContainer">{category}</NavLink>
+        
+            <Navbar expand="lg" className="bg-body-tertiary">
+                <Container>
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Collapse id="basic-navbar-nav">
+                        <Nav className="me-auto">
+                            <NavLink to={`/categorias/${category}`} href="#">{category}</NavLink>
+
+
+                        </Nav>
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>
+
+
+
+
+
+
+
+
+
+
+
+            {/* <NavLink to={`/categorias/${category}`} href="#" className="navbarContainer">{category}</NavLink> */}
 
         </>
 

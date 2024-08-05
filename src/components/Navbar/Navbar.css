@@ -2,7 +2,13 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-top: 24px;
+    width: 100%;
+    padding-top: 50px;
+    background-color: #f7f9f9 ;
+}
+
+img{
+    width: 15%;
 }
 
 .navbarContainer{
@@ -10,12 +16,13 @@
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content: space-evenly;
-    margin: 15px;
     align-items: stretch;
     color: Black;
     text-decoration: revert-layer;
     font-size: 18px;
     font-weight: 600;
+    background-color: #f7f9f9 ;
+    padding-top: 35px;
 }
 
 .navbarContainer:hover{

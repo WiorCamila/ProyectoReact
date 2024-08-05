@@ -4,19 +4,13 @@ import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
-import { Link } from 'react-router-dom';
+
 
 const Contacto = () =>{
 
 
 
     const [validated, setValidated] = useState(false);
-
-    <div className="LogoContacto"> 
-        <Link to="/Contacto" >
-            <img src="https://res.cloudinary.com/dejd638ze/image/upload/v1722880400/contact_vx7xeo.png" alt="" />
-        </Link>
-    </div>
 
     const handleSubmit = (event) => {
       const form = event.currentTarget;

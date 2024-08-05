@@ -34,8 +34,27 @@ img{
     color: blue;
 }
 
+.navbarContainerLink{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: #f7f9f9 ;
+    padding-left: 10px;
+    width: 100%;
+}
+
 
 .imgContacto img{
+    display: flex;
+    justify-content: end;
     width: 30px;
     padding-top: 26px;
+    margin-right: 20px;
+}
+
+.imgCarrito img{
+    width: 30px;
+    padding-top: 26px;
+    margin-right: 38px;
 }

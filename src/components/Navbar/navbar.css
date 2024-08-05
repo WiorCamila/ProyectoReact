@@ -9,7 +9,19 @@
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
-    justify-content: space-around;
-    margin: 20px;
+    justify-content: space-evenly;
+    margin: 15px;
     align-items: stretch;
+    color: Black;
+    text-decoration: revert-layer;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.navbarContainer:hover{
+    color: purple;
+}
+
+.navbarContainer:active{
+    color: blue;
 }

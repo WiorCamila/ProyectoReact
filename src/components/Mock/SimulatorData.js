@@ -1,4 +1,5 @@
-export const categorias = ["Home", "Vajilla", "Botellas", "Mate", "Termo", "Recipiente", "", "Contact", "About"];
+
+export const categorias = ["Home", "Vajilla", "Botellas", "Mate", "Termo", "Recipiente"];
 
 export const productosArrays = [
     //Vajillas. 
@@ -13,7 +14,7 @@ export const productosArrays = [
     },
     {
         id: 2,
-        name: "JUEGOS DE VAJILLA BATIC BLACK & WHITE 4 COMENSALES",
+        name: "JUEGOS DE VAJILLA BATIC BLACK & WHITE 4 COMENSALES" ,
         description:"MATERIAL: CERAMICA, ORIGEN: TURQUIA",
         precio: 181690,
         stock: 10,

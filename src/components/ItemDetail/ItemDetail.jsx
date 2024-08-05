@@ -19,7 +19,7 @@ const ItemDetail = ({product}) => {
                         </Card.Text>
                         <Button variant="primary">Comprar</Button>
                     </Card.Body>
-                    <Card.Footer className="text-muted">Solo quedan {stock}</Card.Footer>
+                    <Card.Footer className="text-muted">Solo quedan: {stock}</Card.Footer>
                 </Card>
 
             </div>

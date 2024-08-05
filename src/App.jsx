@@ -1,5 +1,4 @@
 import './App.css';
-import AboutUs from './components/AboutUs/AboutUs.jsx';
 import Contacto from './components/Contacto/Contacto.jsx'
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer.jsx"
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
@@ -21,7 +20,6 @@ function App() {
             <Route path="/" element={<ItemListContainer/>}/>
             <Route path="/Categorias/:categoriasDeId" element={<ItemListContainer />}/>
             <Route path="/Producto/:id" element={<ItemDetailContainer />}/>
-            <Route path="/About" element={<AboutUs />}/>
             <Route path="/Contacto" element={<Contacto />}/>
             <Route path="*" element={<Error404 />}/>
           </Routes>

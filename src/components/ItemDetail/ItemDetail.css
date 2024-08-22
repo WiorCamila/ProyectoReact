@@ -1,8 +1,26 @@
-.container{
+#container{ 
     display: flex;
-    align-content: center;
-    flex-direction: row;
     justify-content: center;
-    padding: 25px;
-    
+    width: 99%;
+}
+
+#container img {
+    width: 15%;
+}
+#card-div {
+    width: 39%;
+}
+
+#container h1{
+    font-size: 20px;
+    margin: 16px;
+}
+
+#card-div h1{
+    width: 130%;
+}
+
+#card-text p {
+    width: 100%;
+    margin: 16px;
 }

@@ -13,32 +13,28 @@ const ItemDetail = ({id, name, description, precio, stock, img}) => {
 
     // QTY = CANTIDAD DE PRODUCTOS
     const handleBuy = (cantidad) =>{ 
-        console.log(`Se agregaron ${cantidad} productos al Carrito`)
-        
         const productos = {id, name, description, precio}
         agregarAlCarrito(productos, cantidad)
     }
     return(
         <>
-            <div className="container">
-                <Card className="text-center" style={{ width: '20rem'}}>
-                    <Card.Header>{name}</Card.Header>
-                    <Card.Img variant="top" src={img} />
-                    <Card.Body>
-                        <Card.Title>${precio}</Card.Title>
-                        <Card.Text>
-                            {description}
-                        </Card.Text>
-                        <ItemCount stock={stock} inicial={1} handleBuy={handleBuy} />
-                        
-                    </Card.Body>
-                    <Card.Footer className="text-muted">Solo quedan: {stock} </Card.Footer>
-                </Card>
 
+            <div className="d-flex justify-content-md-center p-4" id='container'>
+                <img src={img} alt="" />
+                <div className="card  max-width: 180px;" id='card-div'>
+                    <div className="col-md-8">
+                        <h1>{name}</h1>
+                    </div>
+                    <div className="col-md-8" id='card-text'>
+                        <p>{description}</p>
+                        <p>${precio}</p>
+                    </div>
+                    <ItemCount stock={stock} inicial={1} handleBuy={handleBuy} />
+                    <Card.Footer className="text-muted">Solo quedan: {stock} </Card.Footer>
+                </div>
             </div>
         </>
     )
 }
 
 export default ItemDetail;
-

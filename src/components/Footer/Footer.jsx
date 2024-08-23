@@ -19,6 +19,9 @@ const Footer = () => {
     }
     return(
         <>
+            <footer>
+                <button onClick={addProductos}>agregar productos en la Base de datos</button>
+            </footer>
 
         </>
     )

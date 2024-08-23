@@ -114,7 +114,7 @@ export const productosArrays = [
         description: "Medidas: Altura: Altura: 6.00 cm, Diámetro: 7.50 cm. \n MATERIAL: MÁRMOL Y MADERA",
         precio: 15490,
         stock: 10,
-        img: "https://res.cloudinary.com/dejd638ze/image/upload/v1724373567/tabla_g0goo7.webp",
+        img: "https://res.cloudinary.com/dejd638ze/image/upload/v1724374482/tabla_ua0ras.webp",
         category: ["Recipiente", "Home"]
     },
     {

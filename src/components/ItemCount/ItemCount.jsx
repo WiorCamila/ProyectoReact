@@ -38,15 +38,18 @@ const ItemCount = ( {stock, inicial, handleBuy} ) =>{
     return (
         <>
             <div className="botonMasYMenos">
-                <button type="button" className="btn btn-primary" onClick={clickMenos}>-</button>
-                <span>{cantidad}</span>
-                <button type="button" className="btn btn-primary" onClick={clickMas}>+</button>
+                <button id="botonMas"  type="button" className="btn btn-primary" onClick={clickMas}>+</button>
+                <span id="cantidad">{cantidad}</span>
+                <button id="botonMenos" type="button" className="btn btn-primary" onClick={clickMenos}>-</button>
             </div>
-            {itemAdd ? (
-                <Button variant="primary" onClick={verElCarrito}>Ver el carrito</Button>
-            ) : (
-                <Button variant="primary" onClick={agregarAlCarrito}>Agregar al carrito</Button>
-            )}
+            <div id="botonesVerAndAgregar">
+                {itemAdd ? (
+                    <Button id="botonAVerCarrito" variant="primary" onClick={verElCarrito}>Ver el carrito</Button>
+                ) : (
+                    <Button id="botonAgregador" variant="primary" onClick={agregarAlCarrito}>Agregar al carrito</Button>
+                )}
+
+            </div>
         </>
     )
 }

@@ -13,18 +13,19 @@ const Navbar = () =>{
     return(
         <>
             <nav>
+                
                 <div className="navbarContainer">
                     {categorias.map((element, index) => {
                         return <NavbarLink key={index} category={element} />
                     })}
-                </div>
-                <div className="navbarContainerLink" >
-                    <Link to="/Contacto" className="imgContacto">
-                        <img src="https://res.cloudinary.com/dejd638ze/image/upload/v1722880400/contact_vx7xeo.png" alt="" />
-                    </Link>
-                </div>
-                <CartWidget />
 
+                    <div className="navbarContainerLink" >
+                        <Link to="/Contacto" className="imgContacto">
+                            <img src="https://res.cloudinary.com/dejd638ze/image/upload/v1722880400/contact_vx7xeo.png" alt="" />
+                        </Link>
+                        <CartWidget />
+                    </div>
+                </div>
             </nav>
 
         </>

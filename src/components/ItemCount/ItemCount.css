@@ -1,5 +1,33 @@
 .botonMasYMenos{
     display: flex;
     justify-content: center;
-    padding: 5px;
+}
+
+#botonMenos{
+    margin-right: 5px;
+    height: auto;
+    width: auto;
+}
+
+#cantidad{
+    margin: 5px;
+    font-size: 18px;
+}
+
+#botonMas{
+    margin-left: 5px;
+    height: 38px;
+    width: 33px;
+}
+
+#botonAgregador{ 
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+
+#botonesVerAndAgregar{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
 }

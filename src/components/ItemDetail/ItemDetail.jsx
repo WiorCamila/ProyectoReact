@@ -30,7 +30,7 @@ const ItemDetail = ({id, name, description, precio, stock, img}) => {
                         <p>${precio}</p>
                     </div>
                     <ItemCount stock={stock} inicial={1} handleBuy={handleBuy} />
-                    <Card.Footer className="text-muted">Solo quedan: {stock} </Card.Footer>
+                    <Card.Footer id='stock' className="text-muted">Solo quedan: {stock} </Card.Footer>
                 </div>
             </div>
         </>

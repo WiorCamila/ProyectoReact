@@ -1,14 +1,14 @@
 #container{ 
     display: flex;
     justify-content: center;
-    width: 99%;
 }
 
 #container img {
     width: 15%;
+    border-radius: 5px;
 }
 #card-div {
-    width: 39%;
+    width: 42%;
 }
 
 #container h1{
@@ -21,6 +21,11 @@
 }
 
 #card-text p {
-    width: 100%;
+    width: 140%;
     margin: 16px;
+    font-size: 18px;
+}
+
+#stock{
+    margin-top: auto;
 }

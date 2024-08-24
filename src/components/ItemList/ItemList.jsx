@@ -6,7 +6,6 @@ const ItemList = ({productos}) => {
     return(
         <>
             <div className='card-itemList'>
-                
                 {productos.map((products) => {
                     return <Item key={products.id} products={products} />
             })}

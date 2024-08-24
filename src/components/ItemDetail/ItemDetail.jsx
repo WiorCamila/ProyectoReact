@@ -18,7 +18,6 @@ const ItemDetail = ({id, name, description, precio, stock, img}) => {
     }
     return(
         <>
-
             <div className="d-flex justify-content-md-center p-4" id='container'>
                 <img src={img} alt="" />
                 <div className="card  max-width: 180px;" id='card-div'>

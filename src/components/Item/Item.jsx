@@ -4,13 +4,12 @@ import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 import "../Item/Item.css"
 
-
 const Item = ({products}) =>{
 
     return( 
         <>
             <div className="card-items">
-                <Card >
+                <Card id='card'>
                     <Card.Img variant="top" src={products.img} />
                     <div className='item-title'>
                         <h1>{products.name}</h1>

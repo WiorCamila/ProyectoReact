@@ -5,15 +5,11 @@ import { db } from "../../Firebase/dbConnection.js"
 import { collection, getDocs, query, where } from "firebase/firestore"
 import { useParams } from "react-router-dom"  
 import { LoadingSpinner } from "../Loading/LoadingSpinner.jsx"
-import { useCartContext } from "../../Context/CartContext.jsx"
 
 const ItemListContainer = () =>{
     const [productos, setProductos] = useState([]) //ES UN ESTADO
     const { categoriasDeId } = useParams() //Esto es un Hook
     const [cargando, setCargando] = useState(true)
-    const { titulo } = useCartContext()
-    let tituloMostrar = titulo; 
-
 
     //useEffect
     useEffect(() =>{
@@ -41,12 +37,8 @@ const ItemListContainer = () =>{
     return (
         <main>
             <div >
-                <div>{ tituloMostrar }</div>
                 { cargando ? <LoadingSpinner /> : <ItemList productos={productos}/> }
             </div>
-
-            {/*<ItemCount stock={10} inicial={0}/> */}
-            
         </main>
     )
 }

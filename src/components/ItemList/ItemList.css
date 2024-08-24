@@ -1,13 +1,8 @@
-.card-itemList {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
 
 .card-itemList{
-    margin: 7px;
-    padding: 12px;
-    padding-top: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .card-itemList{

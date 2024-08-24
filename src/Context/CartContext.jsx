@@ -74,7 +74,6 @@ const CartContextProvider = ({children}) => {
     }
 
     const valueContext = {
-        titulo: "Bienvenido a Binah Deco.",
         cantidadProductos, // cantidadProductosArrays = "KEY" // cantidadProductosArrays = "VALUE".
         total,
         carrito,

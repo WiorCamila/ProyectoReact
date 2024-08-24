@@ -1,7 +1,12 @@
 .card-items{
     height: auto;
-    width: 16rem;
-    padding-bottom: 17px;
+    width: 17%;
+    margin: 10px;
+    padding-bottom: 10px;
+}
+
+#card{
+    width: 80%;
 }
 
 .item-title h1{
@@ -14,5 +19,4 @@
 
 .buttom{
     margin: 7px;
-    margin-right: 5px;
 }

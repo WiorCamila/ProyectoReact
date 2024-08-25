@@ -7,6 +7,7 @@ import "../Cart/cart.css";
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
 const Cart = () => {
     const { cart, total, removeCarrito, clearCarrito } = useCartContext();
@@ -25,18 +26,17 @@ const Cart = () => {
     };
 
     const BotonGuardarCarrito = () => {
-        if (!formularioData.name || !formularioData.apellido || !formularioData.tel || !formularioData.email) {
-            alert("Por favor complete todos los campos");
-            return;
-        }
+        console.log("Saving in dataBase")
+        console.log("formularioData", formularioData)
+        console.log("Carrito: ", cart)
 
-        const orderCollection = collection(db, "Ordenes de pedidos");
+        const orderCollection = collection(db, "Ordenes de pedidos")
         const nuevoOrder = {
-            comprador: formularioData,
+            comprador: formularioData, 
             productos: cart,
-            fecha: new Date(),
+            fecha: new Date(), 
             total: total,
-        };
+        }
 
         addDoc(orderCollection, nuevoOrder)
             .then((doc) => {
@@ -89,55 +89,55 @@ const Cart = () => {
             </Table>
 
             <div className="form-container">
-                <Form id="formulario">
-                    <h3 className="mb-4">Información de Compra</h3>
-                    <Row>
-                        <Form.Group className="col-12 mb-3">
-                            <Form.Label>Nombre</Form.Label>
-                            <Form.Control
-                                name="name"
-                                type="text"
-                                placeholder="Ingrese su Nombre"
-                                onChange={(e) => botonesChange(e)}
-                                value={formularioData.name}
-                            />
-                        </Form.Group>
+                <Card className="mx-auto mt-3" style={{ maxWidth: '600px' }}>
+                    <Card.Body>
+                        <Card.Title className="text-center mb-4">Información de Compra</Card.Title>
+                        <Form id="formulario">
+                            <Row>
+                                <Form.Group className="col-6 mb-3">
+                                    <Form.Label>Nombre</Form.Label>
+                                    <Form.Control
+                                        name="name"
+                                        type="text"
+                                        placeholder="Ingrese su Nombre"
+                                        onChange={(e) => botonesChange(e)}
+                                    />
+                                </Form.Group>
 
-                        <Form.Group className="col-12 mb-3">
-                            <Form.Label>Apellido</Form.Label>
-                            <Form.Control
-                                name="apellido"
-                                type="text"
-                                placeholder="Ingrese su Apellido"
-                                onChange={(e) => botonesChange(e)}
-                                value={formularioData.apellido}
-                            />
-                        </Form.Group>
+                                <Form.Group className="col-6 mb-3">
+                                    <Form.Label>Apellido</Form.Label>
+                                    <Form.Control
+                                        name="apellido"
+                                        type="text"
+                                        placeholder="Ingrese su Apellido"
+                                        onChange={(e) => botonesChange(e)}
+                                    />
+                                </Form.Group>
 
-                        <Form.Group className="col-12 mb-3">
-                            <Form.Label>Teléfono</Form.Label>
-                            <Form.Control
-                                name="tel"
-                                type="tel"
-                                placeholder="Ingrese su Teléfono"
-                                onChange={(e) => botonesChange(e)}
-                                value={formularioData.tel}
-                            />
-                        </Form.Group>
+                                <Form.Group className="col-6 mb-3">
+                                    <Form.Label>Teléfono</Form.Label>
+                                    <Form.Control
+                                        name="tel"
+                                        type="number"
+                                        placeholder="Ingrese su Teléfono"
+                                        onChange={(e) => botonesChange(e)}
+                                    />
+                                </Form.Group>
 
-                        <Form.Group className="col-12 mb-3">
-                            <Form.Label>Email</Form.Label>
-                            <Form.Control
-                                name="email"
-                                type="email"
-                                placeholder="Ingrese su Email"
-                                onChange={(e) => botonesChange(e)}
-                                value={formularioData.email}
-                            />
-                        </Form.Group>
-                    </Row>
-                    <Button variant="primary" onClick={BotonGuardarCarrito}>Finalizar Compra</Button>
-                </Form>
+                                <Form.Group className="col-6 mb-3">
+                                    <Form.Label>Email</Form.Label>
+                                    <Form.Control
+                                        name="email"
+                                        type="email"
+                                        placeholder="Ingrese su Email"
+                                        onChange={(e) => botonesChange(e)}
+                                    />
+                                </Form.Group>
+                            </Row>
+                            <Button variant="primary" className="w-100" onClick={BotonGuardarCarrito}>Finalizar Compra</Button>
+                        </Form>
+                    </Card.Body>
+                </Card>
             </div>
         </>
     );

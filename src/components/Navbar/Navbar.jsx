@@ -8,7 +8,9 @@ import CartWidget from "../CartWidget/CartWidget";
 
 //import { NavLink } from "react-router-dom";
 
+
 const Navbar = () =>{  
+
 
     return(
         <>

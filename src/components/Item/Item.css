@@ -2,19 +2,17 @@
     height: auto;
     width: 17%;
     padding: 15px;
-
 }
 
 #card{
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 80%;
 }
 
 #card:hover {
-    transform: scale(1.05); /* Efecto de escala al pasar el ratón */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más prominente en hover */
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
 }
 
 .item-title h1{

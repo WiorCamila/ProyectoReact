@@ -1,80 +1,102 @@
-import { useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import Col from 'react-bootstrap/Col';
+import { useState } from "react";
+import { db } from "../../Firebase/dbConnection";
+import { collection, addDoc } from "firebase/firestore";
+import { useCartContext } from "../../Context/CartContext";
 import Form from 'react-bootstrap/Form';
-import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Row from 'react-bootstrap/Row';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import './Contacto.css';  // Asegúrate de crear este archivo para los estilos personalizados
 
+const Contacto = () => {
+    const [formularioContact, setFormularioContact] = useState({ name: "", tel: "", email: "", mensaje: "" });
+    const { clearCarrito } = useCartContext();
 
-const Contacto = () =>{
-
-
-
-    const [validated, setValidated] = useState(false);
-
-    const handleSubmit = (event) => {
-      const form = event.currentTarget;
-      if (form.checkValidity() === false) {
-        event.preventDefault();
-        event.stopPropagation();
-      }
-  
-      setValidated(true);
+    const botonesChange2 = (e) => {
+        setFormularioContact({ ...formularioContact, [e.target.name]: e.target.value });
     };
 
+    const finalizarElContact = () => {
+        console.log("formularioData", formularioContact);
+
+        const contactCollection = collection(db, "Mensaje de Contact");
+        const nuevoContact = {
+            mensaje: formularioContact,
+        };
+
+        addDoc(contactCollection, nuevoContact)
+            .then((doc) => {
+                alert("Tu mensaje se ha generado con la orden: " + doc.id);
+                clearCarrito();
+                setFormularioContact({ name: "", tel: "", email: "", mensaje: "" });
+            })
+            .catch((error) => {
+                console.log("Error al guardar el documento: ", error);
+            });
+    };
 
     return (
-        <>
+        <div className="contact-form-container">
+            <Card className="contact-card mx-auto mt-5">
+                <Card.Body>
+                    <Card.Title className="text-center mb-4">Contacto</Card.Title>
+                    <Form id="formulario">
+                        <Row>
+                            <Form.Group className="col-12 mb-3">
+                                <Form.Label>Nombre</Form.Label>
+                                <Form.Control
+                                    name="name"
+                                    type="text"
+                                    placeholder="Ingrese su Nombre"
+                                    onChange={botonesChange2}
+                                    value={formularioContact.name}
+                                    className="rounded-pill"
+                                />
+                            </Form.Group>
 
-            <Form noValidate validated={validated} onSubmit={handleSubmit}>
-                <Row className="mb-3">
-                    <Form.Group  as={Col} md="4" controlId="validationCustom01">
-                        <Form.Label>Nombre</Form.Label>
-                        <Form.Control
-                            required
-                            type="text"
-                            placeholder="Meredith"
-                        />
-                        <Form.Control.Feedback>Correcto.</Form.Control.Feedback>
-                    </Form.Group>
-                    <Form.Group as={Col} md="4" controlId="validationCustom02">
-                        <Form.Label>Apellido</Form.Label>
-                        <Form.Control
-                            required
-                            type="text"
-                            placeholder="Grey"
-                        />
-                        <Form.Control.Feedback>Correcto.</Form.Control.Feedback>
-                    </Form.Group>
-                </Row>
-                <Row className="mb-3">
-                    <Form.Group as={Col} md="3" controlId="validationCustom03">
-                        <Form.Label>City</Form.Label>
-                        <Form.Control type="text" placeholder="MeredithGrey@gmail.com" required />
-                        <Form.Control.Feedback type="invalid">
-                            Por favor ingrese Email.
-                        </Form.Control.Feedback>
-                    </Form.Group>
-                    <FloatingLabel
-                        controlId="floatingTextarea"
-                        label="Comments"
-                        className="mb-3"
-                    >
-                        <Form.Control as="textarea" placeholder="Leave a comment here" />
-                    </FloatingLabel>
-                </Row>
-                <Form.Group className="mb-3">
-                    <Form.Check
-                    required
-                    label="Agree to terms and conditions"
-                    feedback="You must agree before submitting."
-                    feedbackType="invalid"
-                    />
-                </Form.Group>
-                <Button type="submit">Submit form</Button>
-            </Form>
-        </>
-    )
+                            <Form.Group className="col-12 mb-3">
+                                <Form.Label>Teléfono</Form.Label>
+                                <Form.Control
+                                    name="tel"
+                                    type="number"
+                                    placeholder="Ingrese su Teléfono"
+                                    onChange={botonesChange2}
+                                    value={formularioContact.tel}
+                                    className="rounded-pill"
+                                />
+                            </Form.Group>
+
+                            <Form.Group className="col-12 mb-3">
+                                <Form.Label>Email</Form.Label>
+                                <Form.Control
+                                    name="email"
+                                    type="email"
+                                    placeholder="Ingrese su Email"
+                                    onChange={botonesChange2}
+                                    value={formularioContact.email}
+                                    className="rounded-pill"
+                                />
+                            </Form.Group>
+
+                            <Form.Group className="col-12 mb-4">
+                                <Form.Label>Mensaje</Form.Label>
+                                <Form.Control
+                                    name="mensaje"
+                                    as="textarea"
+                                    rows={4}
+                                    placeholder="Ingrese su Mensaje"
+                                    onChange={botonesChange2}
+                                    value={formularioContact.mensaje}
+                                    className="rounded"
+                                />
+                            </Form.Group>
+                        </Row>
+                        <Button variant="primary" className="w-100 rounded-pill" onClick={finalizarElContact}>Enviar</Button>
+                    </Form>
+                </Card.Body>
+            </Card>
+        </div>
+    );
 }
 
-export default Contacto; 
+export default Contacto;

@@ -8,13 +8,13 @@ import { useCartContext } from '../../Context/CartContext.jsx';
 
 const ItemDetail = ({id, name, description, precio, stock, img}) => {
     
-    const {agregarAlCarrito} = useCartContext()
+    const {addToCart} = useCartContext()
 
 
     // QTY = CANTIDAD DE PRODUCTOS
-    const handleBuy = (cantidad) =>{ 
+    const handleBuy = (qty) =>{ 
         const productos = {id, name, description, precio}
-        agregarAlCarrito(productos, cantidad)
+        addToCart(productos, qty)
     }
     return(
         <>
@@ -29,7 +29,7 @@ const ItemDetail = ({id, name, description, precio, stock, img}) => {
                         <p>${precio}</p>
                     </div>
                     <ItemCount stock={stock} inicial={1} handleBuy={handleBuy} />
-                    <Card.Footer id='stock' className="text-muted">Solo quedan: {stock} </Card.Footer>
+                    <Card.Footer id='stock' className="text-muted">Solo quedan: {stock}</Card.Footer>
                 </div>
             </div>
         </>

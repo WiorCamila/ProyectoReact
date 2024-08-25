@@ -2,54 +2,55 @@
 import { useState } from "react"
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from "react-router-dom";
+
 import "../ItemCount/ItemCount.css"
 
-const ItemCount = ( {stock, inicial, handleBuy} ) =>{
-    const [cantidad, setCantidad] = useState(inicial)   
-    const [itemAdd, setItemAdd] = useState (false)
+const ItemCount = ({stock, inicial, handleBuy}) =>{
     const navigate = useNavigate();
+    const [qty, setQty] = useState(inicial)   
+    const [itemAdd, setItemAdd] = useState (false)
 
     const clickMenos = () =>{
-        if(cantidad === 0){
+        if(qty === 0){
             alert("Por favor seleccione 1 o más productos.")
             return
         }
-        setCantidad(cantidad - 1)
+        setQty(qty - 1)
     }
 
     const clickMas = () =>{
-        if(cantidad === stock){
+        if(qty === stock){
             alert("No hay más stock.")
             return
         }
-        setCantidad(cantidad + 1)
+        setQty(qty + 1)
     }
 
     const agregarAlCarrito = () =>{
-        handleBuy(cantidad)
+        handleBuy(qty)
         setItemAdd(true)
     }
 
     const verElCarrito = () => {
-        navigate("/cart")
         setItemAdd(false)
+        navigate("/cart")
     }
+
 
     return (
         <>
-            <div className="botonMasYMenos">
-                <button id="botonMas"  type="button" className="btn btn-primary" onClick={clickMas}>+</button>
-                <span id="cantidad">{cantidad}</span>
-                <button id="botonMenos" type="button" className="btn btn-primary" onClick={clickMenos}>-</button>
-            </div>
-            <div id="botonesVerAndAgregar">
-                {itemAdd ? (
-                    <Button id="botonAVerCarrito" variant="primary" onClick={verElCarrito}>Ver el carrito</Button>
+            {itemAdd ? (
+                <Button id="botonAVerCarrito" variant="primary" onClick={verElCarrito}>Ver el carrito</Button>
                 ) : (
-                    <Button id="botonAgregador" variant="primary" onClick={agregarAlCarrito}>Agregar al carrito</Button>
-                )}
-
-            </div>
+                    <>
+                        <div className="botonMasYMenos">
+                            <button id="botonMas"  type="button" className="btn btn-primary" onClick={clickMas}>+</button>
+                            <span id="cantidad">{qty}</span>
+                            <button id="botonMenos" type="button" className="btn btn-primary" onClick={clickMenos}>-</button>
+                        </div>
+                        <Button id="botonAgregador" variant="primary" onClick={agregarAlCarrito}>Agregar al carrito</Button>
+                    </>
+            )}
         </>
     )
 }

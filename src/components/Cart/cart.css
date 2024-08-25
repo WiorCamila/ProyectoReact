@@ -1,15 +1,62 @@
-#formulario{
-    display: flex;
-    justify-content: space-around;
-    padding: 5px;
+/* cart.css */
+.table {
+    margin-bottom: 2rem;
 }
 
-table{
-    border-radius: 2px;
+.table th, .table td {
+    text-align: center;
+    vertical-align: middle;
 }
 
-#botonclear{
-    display: flex;
-    justify-content: end;
-    margin-right: 20px;
+.table th {
+    background-color: #f8f9fa;
+}
+
+.table td {
+    padding: 1rem;
+}
+
+.button-clear {
+    margin-bottom: 2rem;
+}
+
+.form-container {
+    padding: 1rem;
+    border: 1px solid #dee2e6;
+    border-radius: .375rem;
+    background-color: #f8f9fa;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-outline-secondary {
+    border-color: #6c757d;
+    color: #6c757d;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
 }

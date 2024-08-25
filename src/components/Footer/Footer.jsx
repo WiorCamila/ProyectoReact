@@ -19,9 +19,9 @@ const Footer = () => {
     }
     return(
         <>
-            {/*<footer>
+            <footer>
                 <button onClick={addProductos}>agregar productos en la Base de datos</button>
-            </footer>*/}
+            </footer>
 
         </>
     )

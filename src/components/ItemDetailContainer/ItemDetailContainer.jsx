@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
+import { LoadingSpinner } from "../Loading/LoadingSpinner.jsx"
+import ItemLDetail from "../ItemDetail/ItemDetail.jsx"
 import { useParams } from "react-router-dom";
 import { db } from "../../Firebase/dbConnection.js"
 import { collection, getDoc, doc } from "firebase/firestore";
-import { LoadingSpinner } from "../Loading/LoadingSpinner.jsx"
-import ItemLDetail from "../ItemDetail/ItemDetail.jsx"
+
+
 import "../ItemDetailContainer/ItemDetailContainer.css"
 
 const ItemDetailContainer = () =>{

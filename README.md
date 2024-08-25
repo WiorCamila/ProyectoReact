@@ -1,6 +1,6 @@
 # Binah Deco.
 
-Desarrollo de una Plataforma de E-Commerce Integrada con Firebase. Es un proyecto que se basa en E-commerce de venta de productos de bazar, hoy en dia es una marca de decoracion del hogar
+BINAH: Desarrollo de una Plataforma de E-Commerce Integrada con Firebase. Es un proyecto que se basa en E-commerce de venta de productos de bazar, hoy en dia es una marca de decoracion del hogar
 
 Introducción: El proyecto tiene como objetivo el desarrollo de una plataforma de e-commerce que permite a los usuarios comprar productos en línea de manera sencilla y segura.
  

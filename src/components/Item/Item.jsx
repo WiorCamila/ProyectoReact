@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import "../Item/Item.css"
 
 const Item = ({products}) =>{
-    products.isStar = true
     
     return( 
         <>

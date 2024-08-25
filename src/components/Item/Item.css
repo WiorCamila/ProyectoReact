@@ -1,22 +1,49 @@
 .card-items{
     height: auto;
     width: 17%;
-    margin: 10px;
-    padding-bottom: 10px;
+    padding: 15px;
+
 }
 
 #card{
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 80%;
+}
+
+#card:hover {
+    transform: scale(1.05); /* Efecto de escala al pasar el ratón */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más prominente en hover */
 }
 
 .item-title h1{
     font-size: 16px;
     padding-top: 6px;
 }
+
+.item-title p {
+    font-size: 1.2rem;
+    color: #007bff; 
+    margin: 10px 0; 
+}
+
+
 .item-title {
     padding-left: 5px;
 }
 
-.buttom{
-    margin: 7px;
+.buttom {
+    margin: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+}
+.buttom:hover {
+    background-color: #0056b3; 
+    transform: scale(1.05); 
+}
+
+.buttom:focus, .buttom:active {
+    background-color: #004494; 
+    outline: none;
 }

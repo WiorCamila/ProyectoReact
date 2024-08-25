@@ -11,11 +11,11 @@ const ItemCount = ({stock, inicial, handleBuy}) =>{
     const [itemAdd, setItemAdd] = useState (false)
 
     const clickMenos = () =>{
-        if(qty === 0){
-            alert("Por favor seleccione 1 o más productos.")
+        if(qty === 1){
+            alert("No se puede selecionar menos de 1 producto.")
             return
         }
-        setQty(qty - 1)
+        setQty(qty - 0)
     }
 
     const clickMas = () =>{

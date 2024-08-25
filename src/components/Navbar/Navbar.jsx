@@ -5,13 +5,14 @@ import NavbarLink from "./NavbarLink";
 import { categorias } from "../Mock/SimulatorData";
 import { Link } from "react-router-dom";
 import CartWidget from "../CartWidget/CartWidget";
-//import Contacto from "../Contacto/Contacto.jsx"
 
+//import { NavLink } from "react-router-dom";
 
 const Navbar = () =>{  
 
     return(
         <>
+
             <nav>
                 
                 <div className="navbarContainer">

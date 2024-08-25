@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 import "../Navbar/Navbar.css"
 
 const NavbarLink = ({category}) =>{
-    return(
+    return( 
         <>
         
             <Navbar expand="lg" className="bg-body-tertiary">
@@ -20,9 +20,7 @@ const NavbarLink = ({category}) =>{
                 </Container>
             </Navbar>
 
-            {/* <NavLink to={`/categorias/${category}`} href="#" className="navbarContainer">{category}</NavLink> */}
-
-        </>
+    </>
 
     )
 }

@@ -20,14 +20,9 @@
     width: 33px;
 }
 
-#botonAgregador{ 
+#botonVerElCarrito, #botonAgregador{
     display: flex;
     justify-content: center;
-    margin: 5px;
+    margin: 7px;
 }
 
-#botonesVerAndAgregar{
-    display: flex;
-    justify-content: center;
-    margin: 10px;
-}

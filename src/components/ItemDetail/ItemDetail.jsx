@@ -32,7 +32,7 @@ const ItemDetail = ({id, name, description, precio, stock, img}) => {
                     <Card.Footer id='stock' className="text-muted">Solo quedan: {stock}</Card.Footer>
                 </div>
             </div>
-        </>
+    </>
     )
 }
 

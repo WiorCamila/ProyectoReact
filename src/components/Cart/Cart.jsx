@@ -82,7 +82,7 @@ const Cart = () => {
                         <td colSpan={4} style={{ textAlign: 'right', fontWeight: 'bold' }}>Total precio</td>
                         <td style={{ fontWeight: 'bold' }}>$ {total.toFixed(2)}</td>
                         <td>
-                            <Button variant="outline-secondary" onClick={botonClearCarrito}>Clear Items</Button>
+                            <Button variant="outline-secondary" onClick={botonClearCarrito}>Borrar Carrito</Button>
                         </td>
                     </tr>
                 </tbody>

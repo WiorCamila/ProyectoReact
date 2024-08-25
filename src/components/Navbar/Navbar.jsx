@@ -8,7 +8,6 @@ import CartWidget from "../CartWidget/CartWidget";
 
 const Navbar = () =>{  
 
-
     return(
         <>
             <nav>

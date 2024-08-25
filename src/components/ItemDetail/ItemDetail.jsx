@@ -10,8 +10,6 @@ const ItemDetail = ({id, name, description, precio, stock, img}) => {
     
     const {addToCart} = useCartContext()
 
-
-    // QTY = CANTIDAD DE PRODUCTOS
     const handleBuy = (qty) =>{ 
         const productos = {id, name, description, precio}
         addToCart(productos, qty)

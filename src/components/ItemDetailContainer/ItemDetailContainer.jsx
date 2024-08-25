@@ -4,8 +4,6 @@ import ItemLDetail from "../ItemDetail/ItemDetail.jsx"
 import { useParams } from "react-router-dom";
 import { db } from "../../Firebase/dbConnection.js"
 import { collection, getDoc, doc } from "firebase/firestore";
-
-
 import "../ItemDetailContainer/ItemDetailContainer.css"
 
 const ItemDetailContainer = () =>{

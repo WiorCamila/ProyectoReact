@@ -6,7 +6,7 @@ import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import './Contacto.css';  // Asegúrate de crear este archivo para los estilos personalizados
+import './Contacto.css'
 
 const Contacto = () => {
     const [formularioContact, setFormularioContact] = useState({ name: "", tel: "", email: "", mensaje: "" });

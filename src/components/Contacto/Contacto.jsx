@@ -32,7 +32,7 @@ const Contacto = () => {
                     title: "Se ha realizado correctamente",
                     text: "Tu mensaje se ha generado con la orden: " + doc.id,
                     icon: "success"
-                  });
+                });
                 clearCarrito();
                 setFormularioContact({ name: "", tel: "", email: "", mensaje: "" });
             })

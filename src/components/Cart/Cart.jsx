@@ -45,7 +45,7 @@ const Cart = () => {
                     title: "¡Gracias por confiar en nosotros!",
                     text: "El orden de pedido es: " + doc.id,
                     icon: "success"
-                  });
+                });
                 clearCarrito();
                 setFormularioData({ name: "", apellido: "", tel: "", email: "" });
             })
@@ -78,7 +78,7 @@ const Cart = () => {
                                 <td>{qty}</td>
                                 <td>$ {subtotal.toFixed(2)}</td>
                                 <td>
-                                    <Button variant="danger" onClick={() => handlerRemoveCarrito(id, precio, qty)}>Remove</Button>
+                                    <Button variant="danger" onClick={() => handlerRemoveCarrito(id, precio, qty)}>Eliminar</Button>
                                 </td>
                             </tr>
                         );

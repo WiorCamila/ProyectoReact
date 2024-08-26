@@ -6,6 +6,8 @@ import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import Swal from "sweetalert2"
+
 import './Contacto.css'
 
 const Contacto = () => {
@@ -26,7 +28,11 @@ const Contacto = () => {
 
         addDoc(contactCollection, nuevoContact)
             .then((doc) => {
-                alert("Tu mensaje se ha generado con la orden: " + doc.id);
+                Swal.fire({
+                    title: "Se ha realizado correctamente",
+                    text: "Tu mensaje se ha generado con la orden: " + doc.id,
+                    icon: "success"
+                  });
                 clearCarrito();
                 setFormularioContact({ name: "", tel: "", email: "", mensaje: "" });
             })

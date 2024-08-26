@@ -8,6 +8,7 @@ import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import Swal from "sweetalert2"
 
 const Cart = () => {
     const { cart, total, removeCarrito, clearCarrito } = useCartContext();
@@ -40,7 +41,11 @@ const Cart = () => {
 
         addDoc(orderCollection, nuevoOrder)
             .then((doc) => {
-                alert("El orden de pedido es: " + doc.id);
+                Swal.fire({
+                    title: "¡Gracias por confiar en nosotros!",
+                    text: "El orden de pedido es: " + doc.id,
+                    icon: "success"
+                  });
                 clearCarrito();
                 setFormularioData({ name: "", apellido: "", tel: "", email: "" });
             })

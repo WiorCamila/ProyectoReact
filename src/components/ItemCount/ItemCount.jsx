@@ -18,7 +18,7 @@ const ItemCount = ({stock, inicial, handleBuy}) =>{
             });
             return
         }
-        setQty(qty - 0)
+        setQty(qty - 1)
     }
 
     const clickMas = () =>{

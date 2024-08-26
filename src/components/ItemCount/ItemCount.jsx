@@ -2,7 +2,7 @@
 import { useState } from "react"
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from "react-router-dom";
-
+import Swal from "sweetalert2"
 import "../ItemCount/ItemCount.css"
 
 const ItemCount = ({stock, inicial, handleBuy}) =>{
@@ -12,7 +12,10 @@ const ItemCount = ({stock, inicial, handleBuy}) =>{
 
     const clickMenos = () =>{
         if(qty === 1){
-            alert("No se puede selecionar menos de 1 producto.")
+            Swal.fire({
+                title: "No se puede selecionar menos de 1 producto.",
+                icon: "error"
+            });
             return
         }
         setQty(qty - 0)
@@ -20,7 +23,10 @@ const ItemCount = ({stock, inicial, handleBuy}) =>{
 
     const clickMas = () =>{
         if(qty === stock){
-            alert("No hay más stock.")
+            Swal.fire({
+                title: "No hay más stock.",
+                icon: "error"
+            });
             return
         }
         setQty(qty + 1)
